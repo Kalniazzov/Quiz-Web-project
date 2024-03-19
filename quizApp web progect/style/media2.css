@@ -1,0 +1,254 @@
+@media (max-width: 500px) {
+    .choice_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+  
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .erorBtn {
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 140%;
+      color: red;
+    }
+    .infoList {
+      top: 172px;
+      right: 0px;
+      z-index: 10;
+    }
+    .quiz_container .backBtn {
+      width: 40px;
+      position: fixed;
+      left: 30px;
+      top: 30px;
+    }
+    .quizDarkPage {
+      background-image: url("../img/quizDarkPage.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 900px;
+      padding: 20px 0;
+      position: relative;
+    }
+    .quizWhitePage {
+      background-image: url("../img/quizWhitePageBg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      height: 800px;
+      padding: 20px 0;
+      position: relative;
+    }
+  
+    /*TEST PAGE STYLES*/
+    body {
+      overflow: hidden;
+    }
+    .testWhitePage {
+      background-color: #476fe6;
+      padding: 20px 0;
+      position: relative;
+      height: 900px;
+    }
+    .backBtn {
+      width: 30px;
+      position: fixed;
+      left: 20px;
+      top: 10px;
+    }
+    .timer {
+      display: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 500;
+      position: fixed;
+      top: 15px;
+      right: 30px;
+    }
+    .title-1 {
+      display: none;
+      margin-top: 20px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 140%;
+      letter-spacing: 0.34px;
+    }
+    .title-2 {
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: 0.5px;
+      margin-bottom: 31px;
+    }
+  
+    .test-blocks {
+      max-width: 100vw;
+      
+      max-height: 100vh;
+      border-radius: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px #fff;
+      padding: 30px 45px 45px 45px;
+      margin-bottom: 0px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+    }
+    .test-blocks::-webkit-scrollbar {
+      width: 0;
+    }
+  
+    .block {
+      margin-bottom: 35px;
+    }
+    .question-title {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 130%;
+      margin-bottom: 20px;
+      max-width: 300px;
+    }
+    .list-answers {
+    }
+    .list-answers > li {
+      margin-bottom: 15px;
+    }
+    .answer {
+      max-width: 75vw;
+      display: flex;
+      align-items: center;
+      text-align: start;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 15px 15px;
+      background-color: #d9d9d9;
+      /*border: 3px solid #476fe6;*/
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+    .answer img {
+      width: 200px;
+    }
+    .btn {
+      display: none;
+    }
+    .testWhitePage .btn{
+      margin-bottom: 200px;
+    }
+    .testWhitePage .btn4{
+      margin-bottom: 200px;
+    }
+    .testDarkPage .btn{
+      margin-bottom: 200px;
+    }
+    .testDarkPage .btn4{
+      margin-bottom: 200px;
+    }
+  
+    /*MODAL WINDOW*/
+    .modalQuiz {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 525px;
+      background-color: #fff;
+      border-radius: 20px;
+      z-index: 20;
+      padding: 20px;
+    }
+    .modal-title {
+      text-align: start;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 130%;
+    }
+    .modalQuiz > .title {
+      margin-top: 60px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 130%;
+      margin-bottom: 60px;
+    }
+    .infos {
+      margin-left: 10px;
+      margin-bottom: 30px;
+    }
+  
+    .btn-close {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .modalQuiz .btns {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .modalQuiz .btns .btn1 {
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      background-color: #476fe6;
+      padding: 15px 33px;
+      transition: 0.3s;
+      border-radius: 10px;
+    }
+    .modalQuiz .btns .btn2 {
+      color: #476fe6;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 140%;
+      background-color: transparent;
+      padding: 12px 19px;
+      border: 3px solid #476fe6;
+      transition: 0.3s;
+      border-radius: 10px;
+    }
+  
+    /*MODAL WINDOW DARK*/
+    .modalQuizDark .btns {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+    }
+    .modalQuizDark .btns .btn1 {
+      color: white;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 140%;
+      background-color: #000000;
+      padding: 15px 33px;
+      transition: 0.3s;
+    }
+    .modalQuizDark .btns .btn2 {
+      color: #000000;
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 140%;
+      background-color: transparent;
+      padding: 12px 19px;
+      border: 3px solid #000000;
+      transition: 0.3s;
+    }
+  }
+  

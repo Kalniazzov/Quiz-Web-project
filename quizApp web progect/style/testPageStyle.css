@@ -1,0 +1,904 @@
+@import url("reset.css");
+
+/*font style*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/*Test White Page Styles*/
+.testWhitePage {
+  background-color: #476fe6;
+  padding: 20px 0;
+  position: relative;
+  min-height: 1000px;
+}
+.test_container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.backBtn {
+  width: 50px;
+  position: fixed;
+  left: 100px;
+  top: 51px;
+}
+/*
+.upBtn {
+  width: 40px;
+  position: fixed;
+  right: 50px;
+  bottom: 51px;
+}
+*/
+.test_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-1 {
+  margin-top: 44px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.34px;
+}
+.title-2 {
+  
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  margin-bottom: 31px;
+}
+.test-blocks-scrol {
+}
+.test-blocks {
+  max-width: 700px;
+  
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff;
+  padding: 35px 70px;
+  margin-bottom: 20px;
+}
+.block {
+  display: none;
+  margin-bottom: 45px;
+}
+.btns-block{
+ display: flex;
+ justify-content: end;
+ align-items: center;
+ margin-bottom: 10px;
+}
+.backBtnBlock{
+  display: none;
+  align-items: center;
+  gap: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+.backBtnBlock img{
+  width: 20px;
+}
+
+
+.nextBtnBlock{
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+}
+.nextBtnBlock img{
+  width: 20px;
+}
+
+.question-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 20px;
+  max-width: 500px;
+}
+.list-answers {
+}
+.list-answers > li {
+  margin-bottom: 15px;
+}
+.answer {
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  text-align: start;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 28px 15px 28px 15px;
+  background-color: #d9d9d9;
+  /*border: 3px solid #476fe6;*/
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.testWhitePage .activeAnswer {
+  background: linear-gradient(90deg, #476fe6 0%, #cacaca 100%);
+}
+.activeTrueAnswer {
+  background: linear-gradient(90deg, #09ff00 0%, #cacaca 100%);
+}
+.activeFalseAnswer {
+  background: linear-gradient(90deg, #ff0000 0%, #cacaca 100%);
+}
+.testWhitePage .btn  {
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #476fe6;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px #ffffddc1;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.testWhitePage .btn:hover {
+  background-color: #2245af;
+}
+.testWhitePage .btn4 {
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px #ffffddc1;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #476fe6;
+}
+.testWhitePage .btn4:hover {
+
+  background-color: #2245af;
+
+}
+
+
+
+
+.btn-2-design {
+  display: none;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.radio {
+  font-weight: 700;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+.radioActive {
+  background-color: #000;
+  color: #fff;
+}
+.block.activeBlock{
+  display: block;
+}
+
+/*Modal Choice Start window test page*/
+.modalQuiz2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 20;
+  padding: 30px;
+}
+.modalQuiz2 .btn-close-choice {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.modalQuiz2 .modal-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+.choiceQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choiceQuestion label {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.choiceQuestion .choice-Modal-btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  background-color: #476fe6;
+  padding: 12px 22px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.choiceQuestion .choice-Modal-btn:hover {
+  background-color: #153595;
+}
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modalQuiz2.active {
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay2.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*Question acording*/
+.choiceQuestion .questionChoice {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #6d6d6d;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 30;
+  margin-bottom: 20px;
+}
+.listQuestion {
+  display: none;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
+  position: absolute;
+  top: 164px;
+  right: 50px;
+  z-index: 25;
+}
+.listQuestion .questionNumber {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.listQuestion .questionNumber:hover {
+  background-color: #b5b5b5;
+}
+
+/*Timer Element*/
+.timer {
+  display: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  position: fixed;
+  top: 51px;
+  right: 60px;
+}
+.timerModal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  background-color: #fff;
+  padding: 30px;
+}
+.timerModal h1{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+/*Time acording*/
+.choiceQuestion .choiceTime {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #6d6d6d;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 20;
+  margin-bottom: 20px;
+}
+.timeList {
+  display: none;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
+  position: absolute;
+  top: 248px;
+  right: 50px;
+  z-index: 10;
+}
+.timeList .timeNumber {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.timeList .timeNumber:hover {
+  background-color: #b5b5b5;
+}
+
+/*Modal result window test page*/
+.modalQuiz {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 20;
+  padding: 20px;
+}
+.modalQuiz.activeModal{
+  
+}
+.modal-title {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.modalQuiz > .title {
+  margin-top: 130px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 50px;
+}
+.infos {
+  margin-left: 50px;
+  margin-bottom: 80px;
+}
+.infos .info {
+  text-align: start;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.btn-close {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.btns .btn1 {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: #476fe6;
+  padding: 12px 19px;
+  transition: 0.3s;
+}
+.btns .btn2 {
+  color: #476fe6;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: transparent;
+  padding: 9px 17px;
+  border: 3px solid #476fe6;
+  transition: 0.3s;
+}
+.btns .btn1:hover {
+  background-color: #224cc8;
+}
+.btns .btn2:hover {
+  color: #fff;
+  background-color: #476fe6;
+}
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.modalQuiz.active {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*Test Dark Page Styles*/
+.testDarkPage {
+  background-color: #151515;
+  padding: 20px 0;
+  position: relative;
+  min-height: 1000px;
+}
+.test_container {
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.test_container .backBtn {
+  width: 50px;
+  position: absolute;
+  left: 100px;
+  top: 51px;
+}
+
+.test_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-1 {
+  margin-top: 44px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.34px;
+}
+.title-2 {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0.5px;
+  margin-bottom: 31px;
+}
+.test-blocks {
+  width: 700px;
+
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #fff;
+  padding: 45px 70px;
+  margin-bottom: 20px;
+}
+.modalQuizDark .btn-2-design {
+  display: none;
+  padding: 20px 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #000000;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+.block {
+  margin-bottom: 45px;
+}
+.question-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 20px;
+}
+.list-answers {
+}
+.list-answers > li {
+  margin-bottom: 15px;
+}
+.answer {
+  text-align: start;
+  width: 500px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 28px 20px 28px 18px;
+  background-color: #d9d9d9;
+  /*border: 3px solid #476fe6;*/
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.activeAnswer {
+  background: linear-gradient(90deg, #181818 0%, #cacaca 100%);
+  color: #fff;
+}
+.activeTrueAnswer {
+  background: linear-gradient(90deg, #09ff00 0%, #cacaca 100%);
+}
+.activeFalseAnswer {
+  background: linear-gradient(90deg, #ff0000 0%, #cacaca 100%);
+}
+.testDarkPage .btn {
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #000;
+  box-shadow: 0 0 10px #ffffddc1;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.testDarkPage .btn:hover {
+  
+  background-color: #252525;
+  
+}
+
+.testDarkPage .btn4 {
+  padding: 15px 40px;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: #000;
+  box-shadow: 0 0 10px #ffffddc1;
+  border-radius: 10px;
+  transition: 0.3s;
+  background-color: #000;
+}
+.testDarkPage .btn4:hover {
+
+  background-color: #252525;
+
+}
+
+.result {
+  width: 500px;
+  height: 400px;
+  background-color: #fff;
+}
+.radio {
+  font-weight: 700;
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+.radioActive {
+  background-color: #000;
+  color: #fff;
+}
+/*Modal Choice Start window test page*/
+.modalQuizDark2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 20;
+  padding: 30px;
+}
+.modalQuizDark2 .btn-close-choice {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modalQuizDark2 .modal-title {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+  margin-bottom: 15px;
+}
+
+.modalQuizDark2 .choiceQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.choiceQuestion label {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 130%;
+}
+
+.modalQuizDark2 .choiceQuestion .choice-Modal-btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 140%;
+  background-color: #000000;
+  padding: 12px 22px;
+  transition: 0.3s;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+.modalQuizDark2 .choiceQuestion .choice-Modal-btn:hover {
+  background-color: #303030;
+}
+.overlay2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.active {
+  opacity: 0;
+  visibility: hidden;
+}
+.overlay2.active {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/*Question acording*/
+.choiceQuestion .questionChoice {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #6d6d6d;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 30;
+  margin-bottom: 20px;
+}
+.listQuestion {
+  display: none;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
+  position: absolute;
+  top: 164px;
+  right: 50px;
+  z-index: 25;
+}
+.listQuestion .questionNumber {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.listQuestion .questionNumber:hover {
+  background-color: #b5b5b5;
+}
+
+/*Timer Element*/
+.timer {
+  display: none;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  position: fixed;
+  top: 51px;
+  right: 60px;
+}
+.timerModal {
+  display: none;
+  color: #fff;
+  padding-top: 400px;
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #181818a5;
+  width: 100%;
+  height: 100%;
+}
+
+/*Time acording*/
+.choiceQuestion .choiceTime {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #6d6d6d;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 20;
+  margin-bottom: 20px;
+}
+.timeList {
+  display: none;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
+  position: absolute;
+  top: 248px;
+  right: 50px;
+  z-index: 10;
+}
+.timeList .timeNumber {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.timeList .timeNumber:hover {
+  background-color: #b5b5b5;
+}
+
+/*Random acording*/
+.choiceQuestion .choiceRandom {
+  width: 120px;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 5px 5px 5px 10px;
+  border: 2px solid #6d6d6d;
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 8;
+  margin-bottom: 20px;
+}
+.randomList {
+  display: none;
+  width: 120px;
+  background-color: #fff;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.631);
+  position: absolute;
+  top: 332px;
+  right: 50px;
+  z-index: 4;
+}
+.randomList .randomNumber {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.randomList .randomNumber:hover {
+  background-color: #b5b5b5;
+}
+
+/*Modal result window test page*/
+.modalQuizDark {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 20;
+  padding: 20px;
+}
+.modal-title {
+  text-align: start;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 130%;
+}
+.modalQuizDark > .title {
+  margin-top: 130px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 130%;
+  margin-bottom: 50px;
+}
+.infos {
+  margin-left: 50px;
+  margin-bottom: 80px;
+}
+.infos .info {
+  text-align: start;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 150%;
+}
+.btn-close {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.modalQuizDark .btns {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.modalQuizDark .btns .btn1 {
+  color: white;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: #000000;
+  padding: 12px 19px;
+  transition: 0.3s;
+}
+.modalQuizDark .btns .btn2 {
+  color: #000000;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 140%;
+  background-color: transparent;
+  padding: 9px 17px;
+  border: 3px solid #000000;
+  transition: 0.3s;
+}
+.modalQuizDark .btns .btn1:hover {
+  background-color: #2a2a2a;
+}
+.modalQuizDark .btns .btn2:hover {
+  color: #fff;
+  background-color: #000000;
+}
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+.active {
+  opacity: 1;
+  visibility: visible;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
